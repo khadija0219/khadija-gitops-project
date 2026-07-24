@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: khadija-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/khadija0219/khadija-gitops-project.git
+    targetRevision: main
+    path: chart
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: khadija-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
