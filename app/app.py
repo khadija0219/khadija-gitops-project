@@ -13,9 +13,9 @@ def home():
     hostname = socket.gethostname()
     return f"""
     <html>
-        <head><title>Projet GitOps - {khadidjiatou_THIAM}</title></head>
+        <head><title>Projet GitOps - {PRENOM_NOM}</title></head>
         <body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
-            <h1>Bonjour, je suis {khadidjatou} 👋</h1>
+            <h1>Bonjour, je suis {NOM} 👋</h1>
             <h2>Plateforme GitOps observable sur Kubernetes</h2>
             <p>Version de l'application : <b>{VERSION}</b></p>
             <p>Pod : <code>{hostname}</code></p>
