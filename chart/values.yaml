@@ -1,0 +1,24 @@
+replicaCount: 2
+
+namespace: khadija-namespace
+
+image:
+  repository: khadija0219/khadija-app
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 128Mi
+
+appName: khadija-app
+appVersion: "v1"
